@@ -1,4 +1,4 @@
-# Building and Deploying a Token Sale Dapp Project DApp
+# Building and Deploying a Token Sale Dapp Project DApp.
 
 Token Sale Dapp Project for Beginner To Advance Blockchain Developer | Launch Your Own ICO Dapp
 
