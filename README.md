@@ -8,7 +8,7 @@ deploy the contracts
 # 4 
 in Context/constants.js change the addresses with the new one
 # 5
-In Context/index.js change the address in line  and line  with the new TokenSale address.
+In Context/index.js change the address in line 86 and 128 line  with the new TokenSale address.
 
 now u can run the project
 Transfer Button will only function if u r transfering the tokens from owners account ( that is the account from which contracts have been deployed)
