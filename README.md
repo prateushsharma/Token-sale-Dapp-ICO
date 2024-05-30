@@ -5,7 +5,7 @@
 ## change the network and private key- i have used my Ganache test network, u can use the network of ur choice, and replace the private key accoridngly
 # 3: deploy the contracts
 ## ` npx hardhat run scripts/deploy.js --network ganache` (change the ganache with ur network)
-# 4  ## in Context/constants.js change the addresses with the new one
+# 4   in Context/constants.js change the addresses with the new one
 # 5
 ## In Context/index.js change the address in line 86 and 128 line  with the new TokenSale address.
 
