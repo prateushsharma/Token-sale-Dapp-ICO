@@ -1,3 +1,24 @@
+#Follow the instruction below to use the project
+#1:
+npm install
+-note don't change the version,keep it same as given the repo
+#2:
+in hardhat.config.js
+change the network and private key- i have used my Ganache test network, u can use the network of ur choice, and replace the private key accoridngly
+#3
+deploy the contracts
+#4 
+in Context/constants.js change the addresses with the new one
+#5
+In Context/index.js change the address in line  and line  with the new TokenSale address.
+
+now u can run the project
+Transfer Button will only function if u r transfering the tokens from owners account ( that is the account from which contracts have been deployed)
+
+Buy tokens cann be used with any accounts
+
+
+
 # Building and Deploying a Token Sale Dapp Project DApp.
 
 Token Sale Dapp Project for Beginner To Advance Blockchain Developer | Launch Your Own ICO Dapp
