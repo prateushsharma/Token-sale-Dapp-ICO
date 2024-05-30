@@ -1,15 +1,15 @@
-#Follow the instruction below to use the project
-#1:
+# Follow the instruction below to use the project
+# 1:
 npm install
 -note don't change the version,keep it same as given the repo
-#2:
+# 2:
 in hardhat.config.js
 change the network and private key- i have used my Ganache test network, u can use the network of ur choice, and replace the private key accoridngly
-#3
+# 3
 deploy the contracts
-#4 
+# 4 
 in Context/constants.js change the addresses with the new one
-#5
+# 5
 In Context/index.js change the address in line  and line  with the new TokenSale address.
 
 now u can run the project
