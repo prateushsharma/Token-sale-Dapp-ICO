@@ -83,7 +83,7 @@ const fetchInitialData = async () => {
       const TOKENSALE_CONTRACT = await connectingTOKEN_SALE_CONTRACT();
       const tokenPrice = await TOKENSALE_CONTRACT.tokenPrice();
       const tokenSold = await TOKENSALE_CONTRACT.tokensSold();
-      const tokenSaleBalance = await TOKEN_CONTRACT.balanceOf("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512");
+      const tokenSaleBalance = await TOKEN_CONTRACT.balanceOf("0x023E96768633D1a301CB191707a6edE28db4c11d");
 
         const tokenSale = {
             tokenPrice: ethers.utils.formatEther(tokenPrice.toString()),
@@ -111,7 +111,7 @@ const buyToken = async(nToken) =>{
     try{
         const amount = ethers.utils.parseUnits(nToken.toString(),"ether");
         const contract = await connectingTOKEN_SALE_CONTRACT();
-        const buying = await contract.buyToken(nToken,{
+        const buying = await contract.buyTokens(nToken,{
             value:amount.toString(),
         });
         await buying.wait();
@@ -125,8 +125,9 @@ const buyToken = async(nToken) =>{
 // native token transfer
 const transferNativeToken = async()=> {
     try{
-        const TOKEN_SALE_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
-        const TOKEN_AMOUNT = 500;
+        const TOKEN_SALE_ADDRESS = "0x023E96768633D1a301CB191707a6edE28db4c11d";
+        const TOKEN_AMOUNT = 50;
+        //const amount = ethers.utils.parseUnits(nToken.toString(),"ether");
         const tokens = TOKEN_AMOUNT.toString();
         const transferAmount = ethers.utils.parseEther(tokens);
 
@@ -145,7 +146,8 @@ const transferNativeToken = async()=> {
 };
 
     return (
-        <StateContext.Provider value={{transferNativeToken,
+        <StateContext.Provider value={{
+            transferNativeToken,
             buyToken,
             connectWallet,
             setAddress,

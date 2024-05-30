@@ -25,7 +25,7 @@ contract TokenSale {
     function buyTokens(uint256 _numberOfTokens) public payable {
         require(msg.value == multiply(_numberOfTokens, tokenPrice), "Incorrect Ether value");
         require(tokenContract.balanceOf(address(this)) >= _numberOfTokens, "Insufficient tokens");
-        require(tokenContract.transfer(msg.sender, _numberOfTokens), "Token transfer failed");
+        require(tokenContract.transfer(msg.sender, _numberOfTokens*1000000000000000000), "Token transfer failed");
 
         tokensSold += _numberOfTokens;
 

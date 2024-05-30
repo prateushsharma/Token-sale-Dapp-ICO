@@ -1,7 +1,10 @@
 import React from "react";
+import {IoLogoAndroid} from "react-icons/io";
+import {AiFillAdnroid} from "react-icons/ai";
 
 const MobileApp = () => {
-  return <div>MobileApp</div>;
+  return <section>
+  </section>
 };
 
 export default MobileApp;

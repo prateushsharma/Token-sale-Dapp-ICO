@@ -19,7 +19,7 @@ export const connectWallet = async() => {
       const accounts = await window.ethereum.request({
         method: "eth_accounts",
     });
-    console.log(accounts);
+    console.log(accounts[0]);
     } catch (error) {
       console.error('Error requesting accounts:', error);
       return;

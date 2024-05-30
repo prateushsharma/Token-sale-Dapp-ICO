@@ -1,7 +1,7 @@
 import React from "react";
 
 const ArrowUp = () => {
-  return <div>ArrowUp</div>;
+  return ;
 };
 
 export default ArrowUp;
