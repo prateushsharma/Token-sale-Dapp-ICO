@@ -1,8 +1,7 @@
 # Follow the instruction below to use the project
 # 1: `npm install`
 ## note don't change the version,keep it same as given the repo
-# 2:
-## in hardhat.config.js
+# 2: ## in hardhat.config.js
 change the network and private key- i have used my Ganache test network, u can use the network of ur choice, and replace the private key accoridngly
 # 3
 deploy the contracts
