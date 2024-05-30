@@ -1,6 +1,6 @@
 # Follow the instruction below to use the project
 # 1:
-npm install
+`npm install`
 -note don't change the version,keep it same as given the repo
 # 2:
 in hardhat.config.js
