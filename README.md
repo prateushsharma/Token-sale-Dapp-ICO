@@ -12,7 +12,7 @@ now u can run the project
 Transfer Button will only function if u r transfering the tokens from owners account ( that is the account from which contracts have been deployed)
 `
 
-### Buy tokens cann be used with any accounts
+### Buy tokens can be used with any accounts
 
 
 
