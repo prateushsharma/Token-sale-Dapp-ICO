@@ -21,28 +21,22 @@ const Banner = ({transferNativeToken}) => {
               data-animation="fadeInUp"
               data-animation-delay="1.1s"
               >
-                <strong>Bitcoin</strong>
+                {/* <strong>Bitcoin</strong>
                 {" "}is peer to peer innovative{" "} 
-                <strong>network</strong>
+                <strong>network</strong> */}
               </h1>
               <h5 className="animation presale_txt
               text-white"
                 data-animation="fadeInUp"
               data-animation-delay="1.3s"
->
+><div></div>
   Token Presale is <mark className="gradient_box">Live</mark>
                 </h5>
                 <div className="btn_group pt-2 pb-3 animation"
                 data-anmation="fadeInUp"
                 data-animation-delay="1.4s"
                 >
-                  <a href="#whitepaper" className="btn btn-defult
-                   btn-radius nav-link content-popup" 
                   
-                   >
-                    Whitepaper
-                    <BsArrowRight />
-                   </a>
                    <a href="#token" className="btn
                     btn-border btn-radius">
                       Buy Token Now!

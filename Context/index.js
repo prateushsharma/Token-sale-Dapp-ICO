@@ -83,7 +83,7 @@ const fetchInitialData = async () => {
       const TOKENSALE_CONTRACT = await connectingTOKEN_SALE_CONTRACT();
       const tokenPrice = await TOKENSALE_CONTRACT.tokenPrice();
       const tokenSold = await TOKENSALE_CONTRACT.tokensSold();
-      const tokenSaleBalance = await TOKEN_CONTRACT.balanceOf("0x023E96768633D1a301CB191707a6edE28db4c11d");
+      const tokenSaleBalance = await TOKEN_CONTRACT.balanceOf("0xec5389bf30A3a15CfFe068E8F03DcE1A31CB6eBF");
 
         const tokenSale = {
             tokenPrice: ethers.utils.formatEther(tokenPrice.toString()),
@@ -125,7 +125,17 @@ const buyToken = async(nToken) =>{
 // native token transfer
 const transferNativeToken = async()=> {
     try{
-        const TOKEN_SALE_ADDRESS = "0x023E96768633D1a301CB191707a6edE28db4c11d";
+        
+
+        const TOKEN_SALE_ADDRESS = "0xec5389bf30A3a15CfFe068E8F03DcE1A31CB6eBF";
+        const signer = await connectWallet();
+        const currentAccount=await signer.getAddress();
+console.log(currentAccount);
+        if((currentAccount).toString() != "0x19B21F5C521e401B8b89329E1Eba9adF914c6ace")
+            {
+            throw "U cannot transfer the fund as u r not the owner"
+            }
+
         const TOKEN_AMOUNT = 50;
         //const amount = ethers.utils.parseUnits(nToken.toString(),"ether");
         const tokens = TOKEN_AMOUNT.toString();
@@ -142,8 +152,18 @@ const transferNativeToken = async()=> {
     } catch(error)
     {
         console.log(error);
+        alert(error);
     }
 };
+const ShowUserDetails = async() =>{
+    const signer = await connectWallet();
+    const currentAccount=await signer.getAddress();
+    const contract = await connectingTOKENCONTRACT();
+    const data = await contract.getTokenHolderData(currentAccount);
+    console.log("User details");
+    console.log(data);
+    return data;
+}
 
     return (
         <StateContext.Provider value={{
@@ -151,6 +171,7 @@ const transferNativeToken = async()=> {
             buyToken,
             connectWallet,
             setAddress,
+            ShowUserDetails,
             currentHolder,
             tokenSale,
             tokenHolders,

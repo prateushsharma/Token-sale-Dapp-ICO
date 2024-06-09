@@ -117,5 +117,25 @@ new ethers.Contract(TOKEN_SALE_ADDRESS,TOKEN_SALE_ABI,signerOrProvider);
         console.log(error);
     }
  };
+ export const ShowUserDetails = async() =>{
+    const signer = await connectWallet();
+    const currentAccount=await signer.getAddress();
+    const contract = await connectingTOKENCONTRACT();
+    const array = await contract.getTokenHolderData(currentAccount);
+    const bigNumber1 = array[0];
+const address1 = array[1];
+const address2 = array[2];
+const bigNumber2 = array[3];
+const booleanValue = array[4];
+
+console.log(bigNumber1.toString());  // '0'
+console.log(address1);               // '0x0000000000000000000000000000000000000000'
+console.log(address2);               // '0x0000000000000000000000000000000000000000'
+console.log(bigNumber2.toString());  // '0'
+console.log(booleanValue);  
+return array;  
+   
+};
+
 
 
